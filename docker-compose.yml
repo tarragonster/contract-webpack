@@ -1,0 +1,13 @@
+version: "3"
+services:
+  contract:
+    container_name: contract-webpack
+    build: .
+    ports:
+    - "3007:9000"
+    volumes:
+    - .:/home/node/contract-webpack
+    stdin_open: true
+    tty: true
+    environment:
+      HOST: 0.0.0.0
